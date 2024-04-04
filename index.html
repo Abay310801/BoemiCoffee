@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boemi Coffee</title>
+  <link rel="icon" href="assets/img/Logo.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar fixed-top navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand logo" href="#">
+        <img src="assets/img/logo.png" alt="Logo" class="d-inline-block align-text-top" height="30">
+      </a>
+      <button class="navbar-toggler" id="navbarnav" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarToggler">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="menu.html">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" style="background-image: url('assets/img/hero.png');">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h1>Selamat Datang di Boemi Coffee</h1>
+          <p>Nikmati kopi berkualitas dengan suasana nyaman dan pelayanan terbaik.</p>
+          <a href="menu.html" class="btn btn-primary">Lihat Menu</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <img src="assets/img/about.png" alt="About" class="img-fluid">
+        </div>
+        <div class="col-md-6">
+          <h2>Tentang Kami</h2>
+          <p>Boemi Coffee adalah kafe yang menawarkan pengalaman menikmati kopi berkualitas dengan suasana nyaman dan pelayanan terbaik. Kami menggunakan biji kopi pilihan dan metode penyajian yang tepat untuk memberikan cita rasa terbaik kepada pelanggan kami.</p>
+          <p>Didirikan pada tahun 2021, Boemi Coffee telah menjadi tempat favorit bagi para pecinta kopi di kota ini. Kami berkomitmen untuk selalu memberikan produk dan layanan terbaik kepada pelanggan kami.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+      <div class="container mt-5 pt-5">
+        <div class="row">
+            <div class="col-md-6 offset-md-3 silver-container d-flex flex-column">
+                <h2 style="text-align: center;">CONTACT US</h2>
+                <form id="contactForm" class="needs-validation" onsubmit="return validateForm()">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="name">
+                        <label for="floatingInput">Nama</label>
+                        <div class="invalid-feedback">
+                    
+                        </div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com">
+                        <label for="floatingEmail">Email</label>
+                        <div class="invalid-feedback">
+                        
+                        </div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <select class="form-select" id="genderSelect" aria-label="Jenis Kelamin">
+                            <option selected disabled>Jenis Kelamin</option>
+                            <option value="male">Laki-laki</option>
+                            <option value="female">Perempuan</option>
+                        
+                        </select>
+                        <label for="genderSelect"></label>
+                        <div class="invalid-feedback">
+                            Silakan pilih jenis kelamin.
+                        </div>
+                    </div>
+                    <div class="form-floating">
+                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                        <label for="floatingTextarea2">Pesan</label>
+                        <div class="invalid-feedback">                           
+                        </div>
+                    </div><br>
+                    <button type="submit" class="btn btn-success" id="btnContact">Kirim</button>
+                </form>
+                <p style="margin-right: 10px; margin-top: 30px; text-align: right;">Jalan Nglaren Sari, Ngropoh, Condongcatur, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281.</p>
+                <p style="text-align: right;">+62 082 567889</p>
+                <div style="text-align: right;">
+                    <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/boemi.coffee/"><i class="fa-brands fa-square-instagram"></i></a>
+                    <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </div><br>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-light py-3" id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <p>&copy; 2024 Boemi Coffee. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-end" id="sosmed">
+          <a href="https://www.youtube.com/" class="text-light me-3"><i class="fab fa-youtube"></i></a>
+          <a href="https://www.instagram.com/boemi.coffee/" class="text-light me-3"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/" class="text-light me-3"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.twitter.com/" class="text-light me-3"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
